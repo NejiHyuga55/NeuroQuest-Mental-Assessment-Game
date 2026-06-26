@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="./favicon (2).ico">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroQuest</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+      color: #2c2c2c;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.25);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #4b0082;
+    }
+
+    .navbar .nav-links a {
+      color: #4b0082;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #2c003e;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #4b0082;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 18px;
+      color: #5c4a73;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .images .img-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      width: 280px;
+      height: 180px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.9) blur(0.3px);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .images .img-wrapper:hover img {
+      transform: scale(1.05);
+      filter: brightness(1) blur(0);
+    }
+
+    .start-btn {
+      padding: 14px 34px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .start-btn:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .images .img-wrapper {
+        width: 90%;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">NeuroQuest</div>
+    <div class="nav-links">
+      <a href="#">History</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+      <a href="#">Scores</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Welcome to NeuroQuest</h1>
+    <div class="quote">"Every decision tells a story your mind hasn't told you yet."</div>
+
+    <p>Step into a world where your university becomes your mind map. Every turn, every gate, every answer reveals your psychological profile. Are you ready for the journey within?</p>
+
+    <div class="images">
+      <div class="img-wrapper">
+        <img src="./WhatsApp Image 2025-04-30 at 09.06.05_05c92896.jpg" alt="Campus Path">
+      </div>
+      <div class="img-wrapper">
+        <img src="./WhatsApp Image 2025-04-30 at 09.05.52_01f78de4.jpg">
+      </div>
+    </div>
+
+    <button class="start-btn" onclick="window.location.href='./NeuroQuest.jar'">Download</button>
+
+  </div>
+
+
+  <script>
+    function startGame() {
+      const link = document.createElement('a');
+      link.href = './NeuroQuest.jar'; // Path to your .jar file
+      link.download = './NeuroQuest.jar'; // Suggested filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+  
+
+</body>
+</html>
