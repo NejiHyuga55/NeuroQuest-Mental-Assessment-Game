@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MentalAssessmentGameBU:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="NeuroQuest.jar">
+      <element id="module-output" name="MentalAssessmentGameBU" />
+    </root>
+  </artifact>
+</component>
